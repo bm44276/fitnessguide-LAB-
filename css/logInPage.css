@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px #41819A solid;
+    height: 50px;
+}
+
+header .logo{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 100px;
+}
+header .logo img{
+    width: 100px;
+    margin-right: 10px;
+}
+header .logo h1{
+    color: #2382FF;
+    font-size: 25px;
+}
+
+nav{
+    display: block;
+    margin-right: 100px;
+}
+
+nav form input{
+    margin-left: 5px;
+}
+
+nav input[type="text"], nav input[type="password"]{
+    width: 200px;
+    height: 20px;
+    padding-left: 5px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    border-color: #41819A;
+    outline: none;
+    cursor: pointer;
+}
+
+nav input[type="text"]:hover, nav input[type="password"]:hover{
+   background-color: whitesmoke;
+}
+
+nav input[type="submit"]{
+    width: 70px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    border-color: #41819A;
+    outline: none;
+    cursor: pointer;
+}
+
+nav input[type="submit"]:hover{
+    background-color: #41819A;
+    color: white;
+}
+
+main{
+    background-color: #4996da;
+    background-image: url(../images/Component2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1000px;
+}
+
+main div{
+    width: 50%;
+    margin-left: 200px;
+    padding-top: 400px;
+    text-align: center;
+}
+
+main h1{
+    font-size: 50px;
+    color: white;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+
+}
+
+main a{
+    width: 70px;
+    font-size: 22px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+    border: 2px #41819A solid;
+    padding: 5px;
+    text-decoration: none;
+    color: black; 
+}
+
+main a:hover{
+    border-color: #356477;
+    background-color: #356477;
+    color: white;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+footer img{
+    width: 100px;
+    margin-right: 10px;
+}
+
+footer h3{
+    font-size: 20px;
+    letter-spacing: 1px;
+}
