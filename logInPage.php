@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/logInPage.css">
+    <script defer src="frontValidation\LogInValidate.js"></script>
 </head>
 <body>
     <header>
@@ -13,7 +14,7 @@
             <h1>YourFitnessGuide</h1>
         </div>
         <nav>
-            <form action="logIn.php" method="POST">
+            <form action="#" method="POST" onsubmit="return validate()">
                 <input type="text" name="username" id="username" placeholder="Username">
                 <input type="password" name="password" id="password" placeholder="Password">  
                 <input type="submit" name="submit" value="Sign In">

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/signUpPage.css">
+    <script defer src="frontValidation\SignUpValidate.js"></script>
 </head>
 <body>
     <header>
@@ -19,7 +20,7 @@
             <a href="logInPage.php">Log In</a>
         </div>
 
-        <form action="">
+        <form action="" onsubmit="return validate()">
 
             <h1>Sign Up</h1>
 
