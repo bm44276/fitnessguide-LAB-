@@ -50,10 +50,24 @@
                 </div>
                    
                     <div class="sec1">
-                    <div>
-                        <video controls poster=""> <source src="Lower Body 12.mp4" type="video/mp4"></video> 
-                        <p style="letter-spacing: 1px; margin-top: 5px">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum fuga veritatis nostrum sit a laboriosam voluptatibus quas maxime omnis porro repellat maiores amet accusamus corrupti, harum vel suscipit facilis. Maxime!</p>
-                    </div>
+                        <?php
+                            require "backValidation\dbConnection.php";
+
+                            $query = "SELECT * FROM fullbody ORDER BY ID DESC LIMIT 4;";
+                            $result = $DB->query($query);
+
+                            while($row = mysqli_fetch_assoc($result)){
+                                $videoName = basename($row['videopath'],".mp4");
+                                ?>
+
+                        <div>
+                            <video controls poster="admin/<?php echo $row['photopath']?>"  src="admin/<?php echo $row['videopath']?>" type="video/mp4"></video> 
+                            <p style="letter-spacing: 1px; margin-top: 5px"><?php echo $videoName?></p>
+                        </div>
+                            <?php
+                                }
+                            ?>
+                    
                            
                 </div>
             </section>
@@ -65,10 +79,23 @@
                 </div>
                    
                     <div class="sec1">
-                    <div>
-                        <video controls poster=""> <source src="Lower Body 12.mp4" type="video/mp4"></video> 
-                        <p style="letter-spacing: 1px; margin-top: 5px">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum fuga veritatis nostrum sit a laboriosam voluptatibus quas maxime omnis porro repellat maiores amet accusamus corrupti, harum vel suscipit facilis. Maxime!</p>
-                    </div>
+                    <?php
+                            require "backValidation\dbConnection.php";
+
+                            $query = "SELECT * FROM upperbody ORDER BY ID DESC LIMIT 4;";
+                            $result = $DB->query($query);
+
+                            while($row = mysqli_fetch_assoc($result)){
+                                $videoName = basename($row['videopath'],".mp4");
+                                ?>
+
+                        <div>
+                            <video controls poster="admin/<?php echo $row['photopath']?>"  src="admin/<?php echo $row['videopath']?>" type="video/mp4"></video> 
+                            <p style="letter-spacing: 1px; margin-top: 5px"><?php echo $videoName?></p>
+                        </div>
+                            <?php
+                                }
+                            ?>
                            
                 </div>
             </section>
@@ -80,10 +107,23 @@
                 </div>
                    
                     <div class="sec1">
-                    <div>
-                        <video controls poster=""> <source src="Lower Body 12.mp4" type="video/mp4"></video> 
-                        <p style="letter-spacing: 1px; margin-top: 5px">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum fuga veritatis nostrum sit a laboriosam voluptatibus quas maxime omnis porro repellat maiores amet accusamus corrupti, harum vel suscipit facilis. Maxime!</p>
-                    </div>
+                    <?php
+                            require "backValidation\dbConnection.php";
+
+                            $query = "SELECT * FROM lowerbody ORDER BY ID DESC LIMIT 4;";
+                            $result = $DB->query($query);
+
+                            while($row = mysqli_fetch_assoc($result)){
+                                $videoName = basename($row['videopath'],".mp4");
+                                ?>
+
+                        <div>
+                            <video controls poster="admin/<?php echo $row['photopath']?>"  src="admin/<?php echo $row['videopath']?>" type="video/mp4"></video> 
+                            <p style="letter-spacing: 1px; margin-top: 5px"><?php echo $videoName?></p>
+                        </div>
+                            <?php
+                                }
+                            ?>
                            
                 </div>
             </section>
@@ -95,10 +135,23 @@
                 </div>
                    
                     <div class="sec1">
-                    <div>
-                        <video controls poster=""> <source src="Lower Body 12.mp4" type="video/mp4"></video> 
-                        <p style="letter-spacing: 1px; margin-top: 5px">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum fuga veritatis nostrum sit a laboriosam voluptatibus quas maxime omnis porro repellat maiores amet accusamus corrupti, harum vel suscipit facilis. Maxime!</p>
-                    </div>
+                    <?php
+                            require "backValidation\dbConnection.php";
+
+                            $query = "SELECT * FROM cardio ORDER BY ID DESC LIMIT 4;";
+                            $result = $DB->query($query);
+
+                            while($row = mysqli_fetch_assoc($result)){
+                                $videoName = basename($row['videopath'],".mp4");
+                                ?>
+
+                        <div>
+                            <video controls poster="admin/<?php echo $row['photopath']?>"  src="admin/<?php echo $row['videopath']?>" type="video/mp4"></video> 
+                            <p style="letter-spacing: 1px; margin-top: 5px"><?php echo $videoName?></p>
+                        </div>
+                            <?php
+                                }
+                            ?>
                            
                 </div>
             </section>
