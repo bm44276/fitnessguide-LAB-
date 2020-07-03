@@ -101,6 +101,6 @@ li a:hover{
                     <li><a href="food.php">Food</a></li>
                     <li><a href="costum.php">Costum</a></li>
                     <li><a href="profile.php">Profile</a></li>
-                    <li><a href="logout.php">Log Out</a></li>
+                    <li><a href="logOut.php">Log Out</a></li>
               </ul>
         </nav>

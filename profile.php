@@ -42,7 +42,7 @@
                   <input type="password" name="newPassword" id="newPassword" required placeholder="New password">
               </div>
 
-              <button type="submit" name="submit-button">Submit</button>
+              <button type="submit" name="submit-button">Save</button>
             </form>
         </div>
           
@@ -61,10 +61,6 @@
             <Label><?php echo $_SESSION['username'];?></Label>
           </div>
           
-          <div class="age">
-            <label>Birthday: </label>
-            <Label><?php echo $_SESSION['age'];?></Label>
-          </div> 
 
           <div class="email">
             <label>Your Email: </label>

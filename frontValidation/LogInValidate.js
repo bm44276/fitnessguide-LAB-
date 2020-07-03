@@ -8,11 +8,13 @@ const password = document.getElementById("password");
         if(username.nodeValue.trim() === "" || username.value == null){
             username.style = "border: 1px solid red;";
             return false;
-        }else if(password.value.trim() === "" || password.value == null){
+        }
+        if(password.value.trim() === "" || password.value == null){
             password.style = "border: 1px solid red;";
             return false
-        }else{
-            return true;
         }
+        
+            return true;
+        
         
     }

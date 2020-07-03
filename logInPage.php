@@ -15,11 +15,33 @@
             <h1>YourFitnessGuide</h1>
         </div>
         <nav>
-            <form action="#" method="POST" onsubmit="return validate()">
+            <form onsubmit="return validate()" action="backValidation\logIn.php" method="POST"  method = "POST">
                 <input type="text" name="username" id="username" placeholder="Username">
                 <input type="password" name="password" id="password" placeholder="Password">  
                 <input type="submit" name="submit" value="Sign In">
             </form>
+            <?php
+                     $fullURL = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                    if(strpos($fullURL, "UsernameNotFound") == true){  
+                        
+                        ?>
+                           <script>
+                               var username = document.getElementById("username");
+                               username.placeholder = "Username not found";
+                               username.style = "border: 1px solid red";
+                           </script> 
+                        <?php
+                        
+                    }else if(strpos($fullURL, "PasswordIncorrect") == true){
+                        ?>
+                            <script>
+                               var password = document.getElementById("password");
+                               password.placeholder = "incorrect password";
+                               password.style = "border: 1px solid red";
+                           </script>   
+                <?php
+                    }
+                ?>
         </nav>
     </header>
     <main>

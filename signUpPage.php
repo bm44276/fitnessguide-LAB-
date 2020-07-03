@@ -21,7 +21,7 @@
             <a href="logInPage.php">Log In</a>
         </div>
 
-        <form action="" onsubmit="return validate()">
+        <form onsubmit="return validate()" action="backValidation\addUser.php"  method="POST">
 
             <h1>Sign Up</h1>
 
@@ -31,7 +31,7 @@
             </section>
 
             <section class="Sign-email">
-                    <input type="date" id="date" name="date">
+                   
                     <input type="email" name="email" id="user-email" required placeholder="Email" >
             </section>
 
@@ -45,6 +45,20 @@
             </section>
 
         </form>
+        <?php
+                     $fullURL = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                    if(strpos($fullURL, "UsernameIsTaken") == true){  
+                        
+                        ?>
+                           <script>
+                               var username = document.getElementById("user-name");
+                               username.placeholder = "Username is taken";
+                               username.style = "border: 1px solid red";
+                           </script> 
+                        <?php
+                        
+                    }
+                ?>
 
     </main>
     <div class="container"></div>
