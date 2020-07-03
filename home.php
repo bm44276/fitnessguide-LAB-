@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Your Fitnes Guide | Home</title>
     <link rel="stylesheet" href="css/home.css">
+    <link rel="icon" type="image/ico" href="images/Component 12 – 1@2x.png" >
 </head>
 <body>
         <header>
@@ -31,38 +32,39 @@
                 </div>
                 <div class="sect2">
                         <div class="flexImg">
-                                <a href=""><div class="workouts"><h1>Workouts</h1></div></a> 
-                                <a href=""><div class="Costum"><h1>Costum</h1></div></a>    
+                                <a href="workouts.php"><div class="workouts"><h1>Workouts</h1></div></a> 
+                                <a href="costum.php"><div class="Costum"><h1>Costum</h1></div></a>    
                         </div>
                         <div class="flexImg">
-                                <a href=""><div class="food"><h1>Food</h1></div></a>
-                                <a href=""><div class=><h1>Profile</h1></div></a> 
+                                <a href="food.php"><div class="food"><h1>Food</h1></div></a>
+                                <a href="profile.php"><div class="profile"><h1>Profile</h1></div></a> 
                         </div>
                 </div>
                         
             </section>
 
-            <section class="sector2">
-                <h1>Workouts</h1>
+            <section class="sector2 workO">
+                    <a href="workouts.php" style="text-decoration:none;"><h1  style="color:black">WorkOuts</h1> </a>  
                 <div class="sec1">
-                        <button><p></p></button>
-                        <button><p></p></button> 
-                        <button><p></p></button>
-                        <button><p></p></button> 
+                    <div>
+                        <video controls poster=""> <source src="Lower Body 12.mp4" type="video/mp4"></video> 
+                        <p style="letter-spacing: 1px; margin-top: 5px">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum fuga veritatis nostrum sit a laboriosam voluptatibus quas maxime omnis porro repellat maiores amet accusamus corrupti, harum vel suscipit facilis. Maxime!</p>
+                    </div>
+                           
                 </div>
             </section>
-            <section class="sector2">
-                <h1>Food</h1>
+            <section class="sector2 fod">
+                 <a href="food.php" style="text-decoration:none;"><h1  style="color:black">Food</h1></a>   
                 <div class="sec1">
-                        <button><p></p></button>
-                        <button><p></p></button> 
-                        <button><p></p></button>
-                        <button><p></p></button> 
+                    <div>
+                        <img src="images/background.png" alt="">
+                        <p style="letter-spacing: 1px; margin-top: 5px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum aliquam molestiae blanditiis quas nisi deserunt, perspiciatis laborum laudantium dolorum perferendis aliquid, ratione, recusandae fugiat. Doloremque facere ab reprehenderit cum nam?</p>
+                    </div>
                 </div>
             </section>
 
-            <section class="sector2">
-                <h1>Costum</h1>
+            <section class="sector2 cost">
+                <a href="costum.php" style="text-decoration:none;"><h1  style="color:black">Costum</h1></a>
                 <div class="secCostum">
                     <p>
                         Not sure where to start?
@@ -74,10 +76,8 @@
         </main>
 
         <footer>
-                <img src="images/Component 12 – 1@2x.png" alt="">
-                <h3>&copy; YourFitnessGuide.com</h3>
+             <?php include "inc/footer.php" ;?>
         </footer>
 
-    
 </body>
 </html>
