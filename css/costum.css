@@ -1,0 +1,98 @@
+
+
+main{
+    display: block;
+    text-align: center;
+    margin: 30px;
+    margin-top: 50px;
+}
+
+main p{
+    padding: 20px;
+    color: black;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+}
+
+main hr{
+    margin-top: 40px;
+}
+
+main .inputs{
+   display: block;
+   margin: 30px;
+}
+
+main input[type = "number"]{
+   width: 550px;
+   border: 3px #41819A solid;
+   background-color: white;
+   outline: none;
+   border-radius: 50px;
+   padding: 5px;
+   padding-left: 10px;
+   height: 30px;
+   margin: 20px;
+   font-size: 28px;
+   letter-spacing: 3px;
+   cursor: pointer;
+}
+
+
+main label{
+   font-size: 25px;
+   letter-spacing: 2px;
+   font-weight: bolder;
+   display: block;
+}
+
+main input:focus[type = "number"]{
+   width: 590px;
+}
+
+main input::placeholder{
+   color: rgb(170, 170, 170);
+}
+main .selc{
+   display: block;
+   margin: 30px;
+}
+main select {
+   text-align: center;
+   width: 550px;
+   border: 3px #41819A solid;
+   background-color: white;
+   outline: none;
+   border-radius: 50px;
+   margin: 20px;
+   font-size: 28px;
+   letter-spacing: 3px;
+   cursor: pointer;
+   padding-left: 5px;
+}
+
+main button{
+   width: 100px;
+   padding: 5px;
+   outline: none;
+   border: 1px #41819A solid;
+   background-color: white;
+   border-radius: 50px;
+   font-size: 26px;
+   cursor: pointer;
+   margin-top: 30px;
+}
+
+main button:hover{
+   background-color: #41819A;
+   color: white;
+}
+
+footer{
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+}

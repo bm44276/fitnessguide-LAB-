@@ -1,0 +1,28 @@
+main{
+    margin-top: 50px; 
+}
+main h1{
+    text-align: center;
+    color: #4996da;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+}
+
+section{
+    width: 70%;
+    margin: 0 auto;
+}
+section .sector{
+    display: flex;
+    justify-content: center;
+}
+.sector div{
+    width: 350px;
+    margin: 10px 20px;
+    padding: 5px;
+}
+
+.sector div img{
+    width: 300px;
+}

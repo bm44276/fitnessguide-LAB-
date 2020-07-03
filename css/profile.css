@@ -1,0 +1,89 @@
+.main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    margin-bottom: 50px;
+}
+
+.section1{
+    padding: 30px;
+    width: 55%;
+    margin: 10px;
+    height: 680px;
+    text-align: center;
+    border-left: 1px gray solid;
+}
+
+.section2{
+    padding: 30px;
+    width: 45%;
+    margin: 10px;
+    height: 680px;
+    text-align: center;
+    border-left: 1px gray solid;
+}
+
+.section2 label{
+    font-size: 20px;
+}
+
+.main h1{
+    font-size: 43px;
+    font-weight: bolder;
+    font-family: sans-serif;
+    color: #102442;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+.main input{
+    width: 50%;
+    padding: 6px;
+    border: #41819A 2px solid;
+    border-radius: 50px;
+    margin: 20px 0;
+    padding-left: 10px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: bolder;
+    outline: none;
+    color: #26354b;
+    letter-spacing: 1px;
+}
+
+.main input::placeholder{
+    color: #b8b8b8;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 5px;
+    text-align: left;
+}
+.main input:hover{
+    background-color: #f1f1f1;
+}
+
+
+
+.main button{
+    width: 85px;
+    height: 40px;
+    border: 2px #41819A solid;
+    border-radius: 40px;
+    font-size: 18px;
+    font-weight: bolder;
+    padding: 6px;
+    outline: none;
+    cursor: pointer;
+}
+
+.main button:hover{
+    background-color: #41819A;
+    color: white;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
