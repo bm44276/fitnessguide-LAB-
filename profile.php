@@ -31,7 +31,7 @@
 
         <div class="section1">
           <h1>Edit Account Information</h1>
-          <button id="btn" onclick="myfun()" style="width:300px">Change to Password</button>
+          <button id="btn" onclick="myfun()" style="width:300px">Change Password</button>
             <form action="changeAccInfo.php" method="POST" id="nameForm">
               <div>
                  <input type="text" name="first-name" id="first-name" required placeholder="First Name" value="<?php echo $_SESSION['name']?>"> 
@@ -56,7 +56,7 @@
                   <input type="password" name="newPassword" id="newPassword"  placeholder="New password">
               </div>
 
-              <button type="submit" name="submit-button">Save</button>
+              <button type="submit" name="change-password">Save</button>
             </form>
         </div>
      
@@ -96,11 +96,11 @@
         let userf = document.getElementById('nameForm');
         function myfun(){
           if(userf.style.display ==  "block"){
-          btn.innerHTML = "Change to User";
+          btn.innerHTML = "Change General";
           userf.style.display = "none";
           passf.style.display = "block";
           }else{
-            btn.innerHTML = "Change to Password";
+            btn.innerHTML = "Change Password";
             passf.style.display = "none";
             userf.style.display = "block";
           }

@@ -32,7 +32,7 @@
                             
 
                             $type = $_GET['type'];
-                            $query = "SELECT * FROM $type;";
+                            $query = "SELECT * FROM $type ORDER BY ID DESC;";
                             $result = $DB->query($query);
 
                             while($row = mysqli_fetch_assoc($result)){
