@@ -23,11 +23,11 @@ i<?php
 
                 if(password_verify($password,$row['password'])){
 
+                    $_SESSION['ID'] = $row['ID'];
                     $_SESSION['name'] = $row['name'];
                     $_SESSION['surname'] = $row['surname'];
                     $_SESSION['email'] = $row['email'];
                     $_SESSION['username'] = $row['username'];
-                    $_SESSION['password'] = $row['password'];
 
                     header("location:../home.php");
 

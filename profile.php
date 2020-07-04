@@ -21,30 +21,31 @@
 
         <div class="section1">
           <h1>Edit Account Information</h1>
-            <form action="changePassword.php" method="POST">
+            <form action="changeAccInfo.php" method="POST">
               <div>
-                 <input type="text" name="first-name" id="first-name" required placeholder="First Name">
+                 <input type="text" name="first-name" id="first-name" required placeholder="First Name" value="<?php echo $_SESSION['name']?>"> 
               </div>
 
               <div>
-                  <input type="text" name="last-name" id="last-name" required placeholder="Last Name">
+                  <input type="text" name="last-name" id="last-name" required placeholder="Last Name"  value="<?php echo  $_SESSION['surname']?>">
               </div>
 
               <div>
-                  <input type="email" name="email" id="user-email" required placeholder="Email" >
+                  <input type="email" name="email" id="user-email" required placeholder="Email"  value="<?php echo $_SESSION['email']?>">
               </div>
 
               <div>
-                  <input type="password" name="password" id="password" required placeholder="Old password">
+                  <input type="password" name="password" id="password"  placeholder="Old password">
               </div>
 
               <div>
-                  <input type="password" name="newPassword" id="newPassword" required placeholder="New password">
+                  <input type="password" name="newPassword" id="newPassword"  placeholder="New password">
               </div>
 
               <button type="submit" name="submit-button">Save</button>
             </form>
         </div>
+     
           
         <div class="section2">
           <h1>Account Info</h1>
