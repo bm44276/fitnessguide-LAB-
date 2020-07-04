@@ -31,7 +31,8 @@
 
         <div class="section1">
           <h1>Edit Account Information</h1>
-            <form action="changeAccInfo.php" method="POST">
+          <button id="btn" onclick="myfun()" style="width:300px">Change to Password</button>
+            <form action="changeAccInfo.php" method="POST" id="nameForm">
               <div>
                  <input type="text" name="first-name" id="first-name" required placeholder="First Name" value="<?php echo $_SESSION['name']?>"> 
               </div>
@@ -43,8 +44,11 @@
               <div>
                   <input type="email" name="email" id="user-email" required placeholder="Email"  value="<?php echo $_SESSION['email']?>">
               </div>
-
-              <div>
+              <button type="submit" name="submit-button">Save</button>
+            </form>
+          
+          <form action="changeAccInfo.php" method="POST" id = "passwordForm">
+            <div>
                   <input type="password" name="password" id="password"  placeholder="Old password">
               </div>
 
@@ -85,6 +89,24 @@
   <footer>
     <?php include "inc/footer.php" ;?>
     </footer>
-    
+    <script>
+        let btn = document.getElementById('btn');
+        let passf = document.getElementById('passwordForm');
+        passf.style.display = "none";
+        let userf = document.getElementById('nameForm');
+        function myfun(){
+          if(userf.style.display ==  "block"){
+          btn.innerHTML = "Change to User";
+          userf.style.display = "none";
+          passf.style.display = "block";
+          }else{
+            btn.innerHTML = "Change to Password";
+            passf.style.display = "none";
+            userf.style.display = "block";
+          }
+         
+        }
+
+    </script>
 </body>
 </html>
