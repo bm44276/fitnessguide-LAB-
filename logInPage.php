@@ -15,7 +15,7 @@
             <h1>YourFitnessGuide</h1>
         </div>
         <nav>
-            <form onsubmit="return validate()" action="backValidation\logIn.php" method="POST"  method = "POST">
+            <form onsubmit="return validate()" action="backValidation\logIn.php" method="POST">
                 <input type="text" name="username" id="username" placeholder="Username">
                 <input type="password" name="password" id="password" placeholder="Password">  
                 <input type="submit" name="submit" value="Sign In">

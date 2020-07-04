@@ -1,6 +1,9 @@
 <?php
 
     session_start();
+    if(!isset($_SESSION['username'])){
+       header("Location: logInPage.php");
+    }
 
     ?>
 <!DOCTYPE html>
@@ -16,7 +19,7 @@
         <header>
            <?php
             if($_SESSION['admin'] == 1){
-                include "admin\adminHeader.php" ;
+                include "admin\adminUserHeader.php";
             }else{
                 include "inc/header.php" ;
             }

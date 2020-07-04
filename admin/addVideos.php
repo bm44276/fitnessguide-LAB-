@@ -1,5 +1,9 @@
 <?php
     require "../backValidation\dbConnection.php";
+    session_start();
+    if(!isset($_SESSION['username'])){
+        header("location: ../logOut.php");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +13,15 @@
     <title>Document</title>
 </head>
 <body>
-
+    <header>
+        <?php
+        if($_SESSION['admin'] == 1){
+          include "adminHeader.php";
+        }else{
+            header("location: ../logOut.php");
+        }
+          ?>
+    </header>
     <form action="addVideoDB.php" method="POST" enctype='multipart/form-data'>
             <label for="">Photo</label>
             <input type="file" name="photo">

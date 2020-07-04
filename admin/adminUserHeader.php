@@ -96,12 +96,12 @@ li a:hover{
             </form>
         <nav>
             <ul>
-                    <li><a href="../home.php">Home</a></li>
-                    <li><a href="../workouts.php">Workout</a></li>
-                    <li><a href="../food.php">Food</a></li>
-                    <li><a href="../costum.php">Costum</a></li>
-                    <li><a href="../profile.php">Profile</a></li>
+                    <li><a href="home.php">Home</a></li>
+                    <li><a href="workouts.php">Workout</a></li>
+                    <li><a href="food.php">Food</a></li>
+                    <li><a href="costum.php">Costum</a></li>
+                    <li><a href="profile.php">Profile</a></li>
                     <li><a href="admin\addVideos.php">Manage</a></li>
-                    <li><a href="../logOut.php">Log Out</a></li>
+                    <li><a href="logOut.php">Log Out</a></li>
               </ul>
         </nav>

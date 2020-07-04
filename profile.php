@@ -16,7 +16,7 @@
 <header>
 <?php
             if($_SESSION['admin'] == 1){
-                include "admin\adminHeader.php" ;
+              include "admin\adminUserHeader.php";
             }else{
                 include "inc/header.php" ;
             }
