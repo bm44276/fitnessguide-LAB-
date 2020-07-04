@@ -90,7 +90,7 @@ li a:hover{
                 <img src="images/Component 12 – 1@2x.png" alt="">
                 <h1>YourFitnessGuide</h1>
         </div>
-            <form action="displayResearched.php" method="POST">
+            <form action="../displayResearched.php" method="POST">
                 <input type="text" name="search" id="search" placeholder="Search...">
                 <input type="submit" name="Submit" value="Submit">
             </form>
