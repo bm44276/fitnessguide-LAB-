@@ -27,6 +27,7 @@
        if((move_uploaded_file($photoTmpName, $fileDestinationphoto )) && (move_uploaded_file($videoTmpName, $fileDestinationvideo))){
             $query = "INSERT INTO $type (photopath,videopath) VALUES ('$fileDestinationphoto','$fileDestinationvideo');";
             $DB->query($query);
+            header("location:addVideos.php?Successful");      
        }
 
 

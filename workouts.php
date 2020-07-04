@@ -25,19 +25,56 @@
                 <div class="sect2">
                     <h1 style="margin-right: 50px;">Newer Workouts</h1>
                         <div class="flexImg">
-                            <video controls poster=""> <source src="Lower Body 12.mp4" type="video/mp4"></video> 
-                            <p style="letter-spacing: 1px; margin-top: 5px"></p>
-                           
-                            <video controls poster=""> <source src="" type="video/mp4"></video> 
-                            <p style="letter-spacing: 1px; margin-top: 5px"></p>
+                        <?php
+                            require "backValidation\dbConnection.php";
+
+                            $query = "SELECT * FROM fullbody ORDER BY ID DESC LIMIT 1;";
+                            $result = $DB->query($query);
+
+                            $row = mysqli_fetch_array($result);
+                                $videoName = basename($row['videopath'],".mp4");
+                                ?>
+
+                            <video controls poster="admin/<?php echo $row['photopath']?>"  src="admin/<?php echo $row['videopath']?>" type="video/mp4"></video> 
+                            <p style="letter-spacing: 1px; margin-top: 5px"><?php echo $videoName?></p>
+                        
+                            <?php
+                                 $query = "SELECT * FROM lowerbody ORDER BY ID DESC LIMIT 1;";
+                            $result = $DB->query($query);
+
+                            $row = mysqli_fetch_array($result);
+                                $videoName = basename($row['videopath'],".mp4");
+                                ?>
+                            <video controls poster="admin/<?php echo $row['photopath']?>"  src="admin/<?php echo $row['videopath']?>" type="video/mp4"></video> 
+                            <p style="letter-spacing: 1px; margin-top: 5px"><?php echo $videoName?></p>
+
+
                         </div>
 
                         <div class="flexImg">
-                            <video controls poster=""> <source src="" type="video/mp4"></video> 
-                            <p style="letter-spacing: 1px; margin-top: 5px"></p>
-                            
-                            <video controls poster=""> <source src="" type="video/mp4"></video> 
-                            <p style="letter-spacing: 1px; margin-top: 5px"></p>
+                        <?php
+                            require "backValidation\dbConnection.php";
+
+                            $query = "SELECT * FROM upperbody ORDER BY ID DESC LIMIT 1;";
+                            $result = $DB->query($query);
+
+                            $row = mysqli_fetch_array($result);
+                                $videoName = basename($row['videopath'],".mp4");
+                                ?>
+
+                            <video controls poster="admin/<?php echo $row['photopath']?>"  src="admin/<?php echo $row['videopath']?>" type="video/mp4"></video> 
+                            <p style="letter-spacing: 1px; margin-top: 5px"><?php echo $videoName?></p>
+                        
+                            <?php
+                                 $query = "SELECT * FROM cardio ORDER BY ID DESC LIMIT 1;";
+                            $result = $DB->query($query);
+
+                            $row = mysqli_fetch_array($result);
+                                $videoName = basename($row['videopath'],".mp4");
+                                ?>
+                            <video controls poster="admin/<?php echo $row['photopath']?>"  src="admin/<?php echo $row['videopath']?>" type="video/mp4"></video> 
+                            <p style="letter-spacing: 1px; margin-top: 5px"><?php echo $videoName?></p>
+                           
                         </div>
                 </div>
                         
