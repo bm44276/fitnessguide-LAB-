@@ -60,20 +60,29 @@
             <section class="sector2 workO">
                     <a href="workouts.php" style="text-decoration:none;"><h1  style="color:black">WorkOuts</h1> </a>  
                 <div class="sec1">
-                    <div>
-                        <video controls poster=""> <source src="Lower Body 12.mp4" type="video/mp4"></video> 
-                        <p style="letter-spacing: 1px; margin-top: 5px">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum fuga veritatis nostrum sit a laboriosam voluptatibus quas maxime omnis porro repellat maiores amet accusamus corrupti, harum vel suscipit facilis. Maxime!</p>
-                    </div>
+                     <div id="info1">
+                <h3>Why exercise</h3>
+                <p>Exercising is more than just keeping your body in shape and looking good.<br> Excercising reduces your risk of heart disease, high blood pressure, osteoporosis, diabetes, and obesity.</p>
+            </div>
+            <div id="info2">
+                <h3>Why use us</h3>
+                <p>As a new begginer anyone needs help, with our website we will show you different<br>types of exercises shall they be homeworkout or gym ones</p>
+            </div>
                            
                 </div>
             </section>
             <section class="sector2 fod">
                  <a href="food.php" style="text-decoration:none;"><h1  style="color:black">Food</h1></a>   
                 <div class="sec1">
-                    <div>
-                        <img src="images/background.png" alt="">
-                        <p style="letter-spacing: 1px; margin-top: 5px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum aliquam molestiae blanditiis quas nisi deserunt, perspiciatis laborum laudantium dolorum perferendis aliquid, ratione, recusandae fugiat. Doloremque facere ab reprehenderit cum nam?</p>
-                    </div>
+                    <div id="info3">
+                <h3>Nutrition Information</h3>
+                <p>In our page you will also find information about foods that help you in a healthier diet and to build muscle</p>
+            </div>
+
+            <div id="info3">
+                <h3>Healthy Information</h3>
+                <p>Good nutrition is an important part of leading a healthy lifestyle. Combined with physical activity, your diet can help you to reach and maintain a healthy weight, reduce your risk of chronic diseases (like heart disease and cancer), and promote your overall health.</p>
+            </div>
                 </div>
             </section>
 
