@@ -28,6 +28,7 @@ i<?php
                     $_SESSION['surname'] = $row['surname'];
                     $_SESSION['email'] = $row['email'];
                     $_SESSION['username'] = $row['username'];
+                    $_SESSION['admin'] = $row['admin'];
 
                     header("location:../home.php");
 

@@ -1,3 +1,8 @@
+
+<?php 
+    session_start();
+
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +15,13 @@
 <body>
     
         <header>
-           <?php include "inc/header.php" ;?>
+        <?php
+            if($_SESSION['admin'] == 1){
+                include "admin\adminHeader.php" ;
+            }else{
+                include "inc/header.php" ;
+            }
+           ?>
         </header>
 
     <main>
