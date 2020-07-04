@@ -17,11 +17,20 @@
         <?php
         if($_SESSION['admin'] == 1){
           include "adminHeader.php";
+          
         }else{
             header("location: ../logOut.php");
         }
           ?>
     </header>
+    <div>
+    <?php
+    if($_SESSION['admin'] == 1){
+         
+          include "adminOptions.php";
+    }
+    ?>
+    </div>
     <form action="addVideoDB.php" method="POST" enctype='multipart/form-data'>
             <label for="">Photo</label>
             <input type="file" name="photo">
