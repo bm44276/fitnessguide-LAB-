@@ -85,7 +85,7 @@
             <section class="sector2">
                 <div class="title">
                     <h1>Full Body</h1> 
-                    <a href="More.php?signup=">More</a>
+                    <a href="displayVideos.php?type=FullBody">More</a>
                 </div>
                    
                     <div class="sec1">
@@ -114,7 +114,7 @@
             <section class="sector2">
                 <div class="title">
                     <h1>Upper Body</h1> 
-                    <a href="More.php?signup=">More</a>
+                    <a href="displayVideos.php?type=UpperBody">More</a>
                 </div>
                    
                     <div class="sec1">
@@ -142,7 +142,7 @@
             <section class="sector2">
                 <div class="title">
                     <h1>Lower Body</h1> 
-                    <a href="More.php?signup=">More</a>
+                    <a href="displayVideos.php?type=LowerBody">More</a>
                 </div>
                    
                     <div class="sec1">
@@ -170,7 +170,7 @@
             <section class="sector2">
                 <div class="title">
                     <h1>Cardio</h1> 
-                    <a href="More.php?signup=">More</a>
+                    <a href="displayVideos.php?type=Cardio">More</a>
                 </div>
                    
                     <div class="sec1">
