@@ -32,7 +32,8 @@
     }
     ?>
     </div>
-    <div>
+    <h1>Remove Video </h1>
+    <div class="selection">
     <a href="removeVideos.php?type=FullBody">FullBody</a>
     <a href="removeVideos.php?type=UpperBody">UpperBody</a>
     <a href="removeVideos.php?type=LowerBody">LowerBody</a>
@@ -51,9 +52,12 @@
                                 $videoName = basename($row['videopath'],".mp4");
                                 ?>
                                 <form action="removeSpecifikVideoDB.php" method="POST">
-                                <div class="videos">  
-                                    <h1 style="letter-spacing: 1px; margin-top: 5px"><?php echo $videoName?></h1>
-                                    <video controls poster="<?php echo $row['photopath']?>"  src="<?php echo $row['videopath']?>" type="video/mp4"></video> 
+                                <div class="videos"> 
+                                    <div class="flexVid">
+                                    <video controls poster="<?php echo $row['photopath']?>"  src="<?php echo $row['videopath']?>" type="video/mp4"></video>
+                                     <h1 style="letter-spacing: 1px; margin-top: 5px"><?php echo $videoName?></h1>
+                                </div>
+                                   
 
                                     <!--the files needed info-->
                                     <input type="number" name="ID" id="" value="<?php echo $row['ID']?>" style="display: none;">
