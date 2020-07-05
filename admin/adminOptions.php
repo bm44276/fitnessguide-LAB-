@@ -17,8 +17,8 @@
 
 <div class="header">
     <ul>
-        <li><a href="">Add Videos</a></li>
-        <li><a href="">Remove Users</a></li>
-        <li><a href="">Other</a></li>
+        <li><a href="addVideos.php">Add Videos</a></li>
+        <li><a href="removeVideos.php?type=FullBody">Remove Videos</a></li>
+        <li><a href="removeUsers.php">Remove Users</a></li>
     </ul>
 </div>
