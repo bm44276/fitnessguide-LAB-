@@ -23,6 +23,8 @@
             header("location:../signUpPage.php?InvalidForm");
         }else if(empty(trim($password))){
             header("location:../signUpPage.php?InvalidForm");
+        }else if(strlen("$password") < 6){
+            header("location:../signUpPage.php?InvalidFormPassword");
         }else{
             
             $usernameTaken = "SELECT * FROM accounts WHERE username = '$username';";

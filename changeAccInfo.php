@@ -50,9 +50,9 @@
                 $row = mysqli_fetch_array($result);
 
                 if(password_verify($oldpassword,$row['password'])){
-                    $num = strlen("$newpassword");
+                   
                     
-                   if($num < 6){
+                   if(strlen("$newpassword") < 6){
                         header("location: profile.php?PassLengthNotEnough");
                     }else{
 
