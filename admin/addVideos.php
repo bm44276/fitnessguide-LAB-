@@ -49,7 +49,7 @@
             </select>
             <input type="submit" name="submit">
         </form>
-    <main/>
+    </main>
         <footer>
             <img src="../images/Component 12 – 1@2x.png" alt="">
             <h3>&copy; YourFitnessGuide.com</h3>
