@@ -11,6 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="adminCss\addVideos.css">
 </head>
 <body>
     <header>
@@ -31,7 +32,9 @@
     }
     ?>
     </div>
+    <main>
     <form action="addVideoDB.php" method="POST" enctype='multipart/form-data'>
+            <h1>Add Videos</h1>
             <label for="">Photo</label>
             <input type="file" name="photo">
             <br>
@@ -46,7 +49,11 @@
             </select>
             <input type="submit" name="submit">
         </form>
-
+    </main>
+        <footer>
+            <img src="../images/Component 12 – 1@2x.png" alt="">
+            <h3>&copy; YourFitnessGuide.com</h3>
+        </footer>
 </body>
 </html>
    

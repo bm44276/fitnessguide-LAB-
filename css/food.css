@@ -10,19 +10,37 @@ main h1{
 }
 
 section{
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
-}
-section .sector{
     display: flex;
-    justify-content: center;
-}
-.sector div{
-    width: 350px;
-    margin: 10px 20px;
-    padding: 5px;
+    align-items: center;
+    height: auto;
 }
 
-.sector div img{
-    width: 300px;
+section div{
+    width: 350px;
+    margin: 10px 20px;
+    border:1px #4996da  solid;
+    background-color: #5ba6e7;
+    height: 400px;
+}
+
+section h3{
+    color: white;
+    letter-spacing: 1px;
+    margin: 5px;
+    font-size: 22px;
+}
+
+section div img{
+    width: 350px;
+    height: 200px;
+}
+
+section p{
+    color: white;
+    padding: 5px;
+    letter-spacing: 1px;
+    text-align: left;
+    font-size: 18px;
 }

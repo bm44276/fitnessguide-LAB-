@@ -50,15 +50,21 @@
                 $row = mysqli_fetch_array($result);
 
                 if(password_verify($oldpassword,$row['password'])){
+                   
+                    
+                   if(strlen("$newpassword") < 6){
+                        header("location: profile.php?PassLengthNotEnough");
+                    }else{
 
-                $hashedPassword = password_hash($newpassword, PASSWORD_DEFAULT);
+                        $hashedPassword = password_hash($newpassword, PASSWORD_DEFAULT);
 
-                $ID = $_SESSION['ID'];
-                $changePasswordQuery  = "UPDATE accounts SET password = '$hashedPassword' WHERE username = '$_SESSION[username]'";
-                $DB->query($changePasswordQuery );
+                        $ID = $_SESSION['ID'];
+                        $changePasswordQuery  = "UPDATE accounts SET password = '$hashedPassword' WHERE username = '$_SESSION[username]'";
+                        $DB->query($changePasswordQuery );
 
-                header("location: profile.php?PasswordChangedSuccessfully");
-                
+                        header("location: profile.php?PasswordChangedSuccessfully");
+                    }
+
                 }else{
                 header("location: profile.php?passwordIncorrect");
                 }

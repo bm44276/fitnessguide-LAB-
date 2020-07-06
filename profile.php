@@ -59,6 +59,34 @@
               <button type="submit" name="change-password">Save</button>
             </form>
         </div>
+        <?php
+                     $fullURL = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                    if(strpos($fullURL, "passwordIncorrect") == true){  
+                        
+                        ?>
+                           <script>
+                               var oldpassword = document.getElementById("password");
+                               oldpassword.placeholder = "Incorrect password";
+                               oldpassword.style = "border: 1px solid red";
+                           </script> 
+                        <?php
+                        
+                    }else if(strpos($fullURL, "PassLengthNotEnough") == true){
+                        ?>
+                            <script>
+                               var newpassword = document.getElementById("newPassword");
+                               newpassword.placeholder = "Password must be at least 6 characters";
+                               newpassword.style = "border: 1px solid red";
+                           </script>   
+                <?php
+                    }else if(strpos($fullURL, "PasswordChangedSuccessfully") == true){
+                      ?>
+                          <script>
+                             alert("Password changed");
+                         </script>   
+              <?php
+                  }
+                ?>
      
           
         <div class="section2">

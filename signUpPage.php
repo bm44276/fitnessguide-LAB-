@@ -57,6 +57,15 @@
                            </script> 
                         <?php
                         
+                    }else if(strpos($fullURL, "InvalidFormPassword") == true){
+                        ?>
+                        <script>
+                            var password = document.getElementById("user-password");
+                            password.placeholder = "Password must be at least 6 characters";
+                            password.style = "border: 1px solid red";
+                        </script> 
+                     <?php
+                     
                     }
                 ?>
 

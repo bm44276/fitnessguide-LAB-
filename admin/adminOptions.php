@@ -1,16 +1,20 @@
 <style>
     .header{
-          border: 1px solid blue;
-          height: 25px;
           text-align: center;
     }
-    .header ul li{
-        padding: 10px;
-        display: inline;
-        margin: 30px;
+
+    .header ul {
+        display: flex;
+        justify-content: center;
+        padding:10px 0;
     }
-  a{
+    .header  li{
+        list-style-type: none;
+        margin: 0 10px;
+    }
+  .header a{
       text-decoration: none;
+      letter-spacing:1px;
   }
 </style>
 

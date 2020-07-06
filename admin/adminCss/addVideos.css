@@ -1,0 +1,80 @@
+
+main{
+    background-color: #5ba6e7;
+    text-align: center;
+    width: 100%;
+    padding: 50px 0 ;
+}
+
+main form{
+    width: 80%;
+    margin: 50px auto;
+    border: white 1px solid;
+    padding: 40px 0;
+    text-align: center;
+    display: block;
+    height: 500px;
+}
+
+main form input{
+    text-align: center;
+    margin: 30px 0;
+    cursor: pointer;
+    outline: none;
+    
+}
+
+main form label{
+    font-size: 25px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+main h1{
+    color: white;
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin: 15px 0;
+}
+main select{
+    text-align: center;
+    width: 250px;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    letter-spacing: 1px;
+}
+
+main input[type="submit"]{
+   padding: 5px;
+   outline: none;
+   border: 2px #41819A solid;
+   background-color: white;
+   border-radius: 50px;
+   font-size: 20px;
+   cursor: pointer;
+   margin-top: 30px;
+}
+
+main input[type="submit"]:hover{
+    background-color: #41819A;
+    color: white;
+}
+
+footer {
+    border-top: 4px #41819A solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+footer img{
+    width: 100px;
+    margin-right: 10px;
+}
+
+footer h3{
+    font-size: 20px;
+    letter-spacing: 1px;
+}
