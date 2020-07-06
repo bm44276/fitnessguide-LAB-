@@ -74,7 +74,7 @@
 
                     <div>
                     <a href=""><img src="Foods\asparagus.jpg" alt=""></a>
-                    <a href=""><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, sunt.</p></a>
+                    <a href=""><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></a>
                     </div>
 
                     <div>
