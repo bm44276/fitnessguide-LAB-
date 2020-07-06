@@ -63,7 +63,7 @@ main {
 }
 
 .flexImg a .Costum{
-    background-image: url(../images/costum.png);
+    background-image: url(../images/Component\ 7\ –\ 1.png);
     background-size: cover;
 }
 
@@ -73,12 +73,12 @@ main {
 }
 
 .flexImg a .profile{
-    background-image: url(../images/profile.png);
+    background-image: url(../images/Component\ 8\ –\ 1.png);
     background-size: cover;
 }
 
 .flexImg a div{
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
 .flexImg a div:hover{
