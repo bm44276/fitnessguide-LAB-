@@ -1,0 +1,44 @@
+main{
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+main .vid{
+    width: 900px;
+}
+main video{
+    width: 900px;
+}
+
+main .oVid{
+    width: 600px;
+    border: 1px solid black;
+    padding: 5px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    height: 700px;
+}
+
+.oVid div {
+    display: flex;
+    margin-bottom: 15px;
+}
+main img {
+    width: 300px;
+    cursor: pointer;
+}
+
+.oVid p{
+    margin-left: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    color: black;
+}
+
+.oVid a{
+    text-decoration: none;
+}
+.oVid a:hover{
+    text-decoration: underline;
+}
