@@ -11,13 +11,15 @@
         $query = "INSERT INTO customusers (weight,height,gender) VALUES ($weight,$height,'$gender');";
         $DB->query($query);
 
-        $num = (mysqli_num_rows($DB->query("SELECT * FROM customusers")));
+        $num = (mysqli_fetch_array($DB->query("SELECT * FROM customusers ORDER BY ID DESC LIMIT 1")));
         
-        $updateusercustom = "UPDATE accounts SET custom = $num WHERE username = '$_SESSION[username]';";
+
+        $_SESSION['custom'] = $num['ID'];
+
+        $updateusercustom = "UPDATE accounts SET custom = '$num[ID]' WHERE username = '$_SESSION[username]';";
 
         $DB->query($updateusercustom);
 
-        $_SESSION['custom'] = $num;
 
         header("location: setCustom.php");
 

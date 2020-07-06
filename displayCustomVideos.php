@@ -15,9 +15,11 @@
     /* the formula for BMI is weight in kilograms divided by height in meters squared
      58kg/(1.65)^2
      the range is  18.5 to 24.9 normal*/
+   
      $result = $row['weight']/($row['height']^2);
-     $_SESSION['gender'] = $row['gender'];
 
+     $_SESSION['gender'] = $row['gender'];
+    
     ?>
 
 
