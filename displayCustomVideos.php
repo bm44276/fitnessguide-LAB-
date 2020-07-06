@@ -27,6 +27,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+     <link rel="stylesheet" href="css\displayCustomVideos.css">
 </head>
 <body>
 <header>
@@ -49,5 +50,45 @@
             echo "normal";
         }
     ?>
+     <main>
+            <div class="vid">
+            <video controls poster="admin\videos\FullBody\ 6 exercises for BIGGER legs  full LEG WORKOUT by Frank Medrano & Dejan Stipke\Capture.jpg?>"  src="admin\videos\FullBody\ 6 exercises for BIGGER legs  full LEG WORKOUT by Frank Medrano & Dejan Stipke\6 exercises for BIGGER legs  full LEG WORKOUT by Frank Medrano & Dejan Stipke.mp4"></video> 
+                            <p style="letter-spacing: 1px; margin-top: 5px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vero dolorum quae voluptates harum, possimus id quis delectus aspernatur voluptatibus nulla, quia assumenda accusantium aperiam. Possimus, libero? Tenetur, placeat ipsum?</p>
+            </div>
+
+            <div class="oVid">
+                    <div>
+                    <a href=""><img src="Foods\asparagus.jpg" alt=""></a>
+                    <a href=""><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, sunt.</p></a>
+                    </div>
+
+                    <div>
+                    <a href=""><img src="Foods\asparagus.jpg" alt=""></a>
+                    <a href=""><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, sunt.</p></a>
+                    </div>
+
+                    <div>
+                    <a href=""><img src="Foods\asparagus.jpg" alt=""></a>
+                    <a href=""><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, sunt.</p></a>
+                    </div>
+
+                    <div>
+                    <a href=""><img src="Foods\asparagus.jpg" alt=""></a>
+                    <a href=""><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, sunt.</p></a>
+                    </div>
+
+                    <div>
+                    <a href=""><img src="Foods\asparagus.jpg" alt=""></a>
+                    <a href=""><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, sunt.</p></a>
+                    </div>
+
+                    <div>
+                    <a href=""><img src="Foods\asparagus.jpg" alt=""></a>
+                    <a href=""><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, sunt.</p></a>
+                    </div>
+                
+            </div>
+        
+        </main>
 </body>
 </html>
