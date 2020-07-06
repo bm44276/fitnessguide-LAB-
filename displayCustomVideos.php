@@ -16,7 +16,7 @@
      58kg/(1.65)^2
      the range is  18.5 to 24.9 normal*/
      $result = $row['weight']/($row['height']^2);
-
+     $_SESSION['gender'] = $row['gender'];
 
     ?>
 
@@ -39,53 +39,56 @@
             }
            ?>
     </header>
-    <h1>Hello to your custom workouts</h1>
-    <p><?php echo $result?></p>
     <?php
         if($result <= 18.5){
-            echo "underweight";
+            $_SESSION['state'] = "underweight";
         }else if ($result >= 24.9){
-            echo "overweight sorry";
+            $_SESSION['state'] = "overweight";
         }else{
-            echo "normal";
+            $_SESSION['state'] = "normal";
         }
+
+        $result2;
+        if($_SESSION['gender'] == 'B'){
+            $selectVideos = "SELECT * FROM customvideos WHERE state = '$_SESSION[state]';";
+            $result2 = $DB->query($selectVideos);
+        }else{
+            $selectVideos = "SELECT * FROM customvideos WHERE state = '$_SESSION[state]' AND gender = '$_SESSION[gender]';";
+            $result2 = $DB->query($selectVideos);
+        }
+
+        
+
+
     ?>
      <main>
             <div class="vid">
-            <video controls poster="admin\videos\FullBody\ 6 exercises for BIGGER legs  full LEG WORKOUT by Frank Medrano & Dejan Stipke\Capture.jpg?>"  src="admin\videos\FullBody\ 6 exercises for BIGGER legs  full LEG WORKOUT by Frank Medrano & Dejan Stipke\6 exercises for BIGGER legs  full LEG WORKOUT by Frank Medrano & Dejan Stipke.mp4"></video> 
-                            <p style="letter-spacing: 1px; margin-top: 5px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vero dolorum quae voluptates harum, possimus id quis delectus aspernatur voluptatibus nulla, quia assumenda accusantium aperiam. Possimus, libero? Tenetur, placeat ipsum?</p>
+                <?php
+
+                    $currentVideo = "SELECT * FROM customvideos WHERE ID = '$_GET[videoID]'";
+                    $result3 = $DB->query($currentVideo);
+                    $video = mysqli_fetch_array($result3);
+
+                ?>
+            <video controls poster="admin/<?php echo $video['photopath']?>"  src="admin/<?php echo $video['videopath']?>"></video> 
+                            <p style="letter-spacing: 1px; margin-top: 5px"><?php echo $video['name']?></p>
             </div>
 
             <div class="oVid">
-                    <div>
-                    <a href=""><img src="Foods\asparagus.jpg" alt=""></a>
-                    <a href=""><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, sunt.</p></a>
-                    </div>
+
+                <?php
+                    while($row = mysqli_fetch_assoc($result2)){
+                        ?>
 
                     <div>
-                    <a href=""><img src="Foods\asparagus.jpg" alt=""></a>
-                    <a href=""><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, sunt.</p></a>
+                    <a href="displayCustomVideos.php?videoID=<?php echo $row['ID']?>"><img src= "admin/<?php echo $row['photopath']?>" alt="image" ></a>
+                    <a href="displayCustomVideos.php?videoID=<?php echo $row['ID']?>"><p><?php echo $row['name']?></p></a>
                     </div>
 
-                    <div>
-                    <a href=""><img src="Foods\asparagus.jpg" alt=""></a>
-                    <a href=""><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, sunt.</p></a>
-                    </div>
-
-                    <div>
-                    <a href=""><img src="Foods\asparagus.jpg" alt=""></a>
-                    <a href=""><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></a>
-                    </div>
-
-                    <div>
-                    <a href=""><img src="Foods\asparagus.jpg" alt=""></a>
-                    <a href=""><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, sunt.</p></a>
-                    </div>
-
-                    <div>
-                    <a href=""><img src="Foods\asparagus.jpg" alt=""></a>
-                    <a href=""><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, sunt.</p></a>
-                    </div>
+                    <?php
+                    }
+                    ?>
+                 
                 
             </div>
         
