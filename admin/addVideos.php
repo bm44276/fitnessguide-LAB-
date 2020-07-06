@@ -51,7 +51,7 @@
             <input type="submit" name="submit">
         </form>
         
-        <form action="addCustomDB.php" method="POST" enctype='multipart/form-data' id="CosForm">
+        <form action="addVideoDB.php" method="POST" enctype='multipart/form-data' id="CosForm">
             <h1>Add Custum Videos</h1>
             <label for="">Photo</label>
             <input type="file" name="photo">
@@ -66,11 +66,11 @@
             </select>
             <br>
             <select name = "type2"> 
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
             </select>
             <br>
-            <input type="submit" name="submit">
+            <input type="submit" name="submit2">
         </form>
         <button id="btn" onclick="myfun()" style="width:300px">Change to Custom</button>
     </main>
