@@ -64,34 +64,43 @@
      <main>
             <div class="vid">
                 <?php
+                    
+                    if($_GET['videoID'] == 'Empty'){
+
+                        $firstrowID = mysqli_fetch_array($result2);
+
+                        $_GET['videoID'] = $firstrowID['ID'];
+
+                    }
 
                     $currentVideo = "SELECT * FROM customvideos WHERE ID = '$_GET[videoID]'";
                     $result3 = $DB->query($currentVideo);
                     $video = mysqli_fetch_array($result3);
 
                 ?>
-            <video controls poster="admin/<?php echo $video['photopath']?>"  src="admin/<?php echo $video['videopath']?>"></video> 
-                            <p style="letter-spacing: 1px; margin-top: 5px"><?php echo $video['name']?></p>
+            <video controls poster="admin/<?php echo $video['photopath']?>"  src="admin/<?php echo $video['videopath']?>" id="videoPlaying"></video> 
+                     <p style="letter-spacing: 1px; margin-top: 5px" id="videotitle"><?php echo $video['name']?></p>
             </div>
 
             <div class="oVid">
 
                 <?php
                     while($row = mysqli_fetch_assoc($result2)){
-                        ?>
+                    
+                      
+                     ?>
 
                     <div>
-                    <a href="displayCustomVideos.php?videoID=<?php echo $row['ID']?>"><img src= "admin/<?php echo $row['photopath']?>" alt="image" ></a>
+                    <a href="displayCustomVideos.php?videoID=<?php echo $row['ID']?>"><img src= "admin/<?php echo $row['photopath']?>" alt="image"></a>
                     <a href="displayCustomVideos.php?videoID=<?php echo $row['ID']?>"><p><?php echo $row['name']?></p></a>
                     </div>
 
                     <?php
                     }
                     ?>
-                 
                 
             </div>
-        
+           
         </main>
 </body>
 </html>
