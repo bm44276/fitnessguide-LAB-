@@ -31,7 +31,7 @@ video{
 
 .videos{
     margin: 20px 5px;
-    background-color: #4996da;
+    border-bottom: 1px solid black;
 }
 
 .flexVid{
@@ -41,7 +41,7 @@ video{
 
 .flexVid h1{
     margin-left: 40px;
-    color: white;
+    color: black;
 }
 
 .videos input[type="submit"]{
