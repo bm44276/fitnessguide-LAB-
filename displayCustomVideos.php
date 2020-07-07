@@ -88,7 +88,7 @@
             </div>
 
             <div class="oVid">
-
+            <p style="margin-bottom: 5px;">Up next:</p>
                 <?php
                     while($row = mysqli_fetch_assoc($result2)){
                     
@@ -109,7 +109,7 @@
         </main>
     
         <div class="link">
-                  <a href="changeCustom.php">Change Custom</a>
+                  <a href="changeCustom.php">Change your custom information</a>
         </div>
 
         <footer>

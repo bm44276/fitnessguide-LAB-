@@ -30,11 +30,11 @@
         
         <main>
         <div>
-            <h1>Change Your Custom</h1>
+            <h1>Change Your Custom Information</h1>
         </div>
         <hr>
             <div class="inputs">
-            <form action ="" method="POST">
+            <form action = "changeCustomDB.php" method="POST">
                 <input type="number" name="height" id="heights" placeholder="height" step=".01">
                     <br>
                 <input type="number" name="weight" id="weight" placeholder="weight" step=".01">
