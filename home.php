@@ -28,7 +28,7 @@
 
         <main>
             <div class="imgDiv">
-                <img src="images/Component 3 – 2.png" alt="">
+                <video src="images\backgroundvideo.mp4" autoplay id="myVideo" loop></video>
             </div>
             <section class="sector1">
                 <div class="sect1">

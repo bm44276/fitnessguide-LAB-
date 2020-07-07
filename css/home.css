@@ -2,13 +2,18 @@ main {
     text-align: center;
 }
 .imgDiv{
-    padding: 5px;
-    background-color: #4996da;
-    margin-bottom: 25px;
+        bottom: 0;
+        color: #f1f1f1;
+        width: 100%;
+        padding: 20px;
+        background-color: #9eb4cf;
 }
-.imgDiv img{
+#myVideo {
+    right: 0;
+    bottom: 0;
     width: 70%;
-}
+    height: 70%;
+  }
 
 .sector1{
     display: flex;
@@ -147,3 +152,4 @@ main {
     font-size: 24px;
     padding: 5px;
 }
+
