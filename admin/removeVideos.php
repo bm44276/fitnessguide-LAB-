@@ -38,6 +38,7 @@
     <a href="removeVideos.php?type=UpperBody">UpperBody</a>
     <a href="removeVideos.php?type=LowerBody">LowerBody</a>
     <a href="removeVideos.php?type=Cardio">Cardio</a>
+    <a href="removeVideos.php?type=CustomVideos">Custom</a>
     </div>
     <section>
 

@@ -20,6 +20,9 @@
    
 
      $_SESSION['gender'] = $row['gender'];
+
+     $_SESSION['height'] = $row['height'];
+     $_SESSION['weight'] = $row['weight'];
     
     ?>
 
@@ -92,7 +95,6 @@
                 <?php
                     while($row = mysqli_fetch_assoc($result2)){
                     
-                      
                      ?>
 
                     <div>

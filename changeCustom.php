@@ -35,9 +35,9 @@
         <hr>
             <div class="inputs">
             <form action = "changeCustomDB.php" method="POST">
-                <input type="number" name="height" id="heights" placeholder="height" step=".01">
+                <input type="number" name="height" id="heights" placeholder="height" step=".01" value="<?php echo $_SESSION['height']?>">
                     <br>
-                <input type="number" name="weight" id="weight" placeholder="weight" step=".01">
+                <input type="number" name="weight" id="weight" placeholder="weight" step=".01" value="<?php echo $_SESSION['weight']?>">
                     <br>
                     <br>
                         <div class="selc">
