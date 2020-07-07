@@ -42,3 +42,21 @@ main img {
 .oVid a:hover{
     text-decoration: underline;
 }
+
+.link{
+    margin: 30px;
+}
+ .link a{
+    border: 1px solid #41819A;
+    text-align: center;
+    text-decoration: none;
+    margin: 30px;
+    padding: 5px;
+    font-weight: bold;
+    color: black;
+}
+
+.link a:hover{
+    background-color: #41819A;
+    color: white;
+}
