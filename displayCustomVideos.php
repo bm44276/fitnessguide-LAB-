@@ -107,5 +107,14 @@
             </div>
            
         </main>
+    
+        <div class="link">
+                  <a href="changeCustom.php">Change Custom</a>
+        </div>
+
+        <footer>
+             <?php include "inc/footer.php" ;?>
+        </footer>
+    
 </body>
 </html>
