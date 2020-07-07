@@ -38,13 +38,10 @@
                             while($row = mysqli_fetch_assoc($result)){
                                 $videoName = basename($row['videopath'],".mp4");
                                 ?>
-                                <div class="videos">  
-                                    <h1 style="letter-spacing: 1px; margin-top: 5px"><?php echo $videoName?></h1>
+                                <div class="videos">       
                                     <video controls poster="admin/<?php echo $row['photopath']?>"  src="admin/<?php echo $row['videopath']?>" type="video/mp4"></video> 
-                                    
+                                    <h1 style="letter-spacing: 1px; margin-top: 5px"><?php echo $videoName?></h1>
                                 </div>
-
-
                                 <?php
                                 }
                                 ?>
@@ -52,12 +49,8 @@
                             <?php
                            
                             ?>
-                        
             </div>
 
-         
-               
-            
             
         </section>
 
