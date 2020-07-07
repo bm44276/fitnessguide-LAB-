@@ -25,7 +25,6 @@
     <main>
         <h1>Results:</h1>
         <section>
-
            
                        <?php
                             require "backValidation\dbConnection.php";
@@ -41,11 +40,9 @@
                                 $videoName = basename($row['videopath'],".mp4");
                                 ?>
                                 <div class="videos">  
-                                    <h1 style="letter-spacing: 1px; margin-top: 5px"><?php echo $videoName?></h1>
                                     <video controls poster="admin/<?php echo $row['photopath']?>"  src="admin/<?php echo $row['videopath']?>" type="video/mp4"></video> 
-                                    
+                                    <h1 style="letter-spacing: 1px; margin-top: 5px"><?php echo $videoName?></h1>
                                 </div>
-
                                 <?php
                                 }
                                 $query2 = "SELECT * from  lowerbody WHERE name LIKE '%$as%';";
@@ -55,11 +52,9 @@
                                 $videoName = basename($row['videopath'],".mp4");
                                 ?>
                                 <div class="videos">  
-                                    <h1 style="letter-spacing: 1px; margin-top: 5px"><?php echo $videoName?></h1>
                                     <video controls poster="admin/<?php echo $row['photopath']?>"  src="admin/<?php echo $row['videopath']?>" type="video/mp4"></video> 
-                                    
+                                   <h1 style="letter-spacing: 1px; margin-top: 5px"><?php echo $videoName?></h1>
                                 </div>
-
                                 <?php
                                 }
 
@@ -71,9 +66,8 @@
                                 $videoName = basename($row['videopath'],".mp4");
                                 ?>
                                 <div class="videos">  
-                                    <h1 style="letter-spacing: 1px; margin-top: 5px"><?php echo $videoName?></h1>
                                     <video controls poster="admin/<?php echo $row['photopath']?>"  src="admin/<?php echo $row['videopath']?>" type="video/mp4"></video> 
-                                    
+                                     <h1 style="letter-spacing: 1px; margin-top: 5px"><?php echo $videoName?></h1>
                                 </div>
 
                                 <?php
@@ -87,22 +81,15 @@
                                 $videoName = basename($row['videopath'],".mp4");
                                 ?>
                                 <div class="videos">  
-                                    <h1 style="letter-spacing: 1px; margin-top: 5px"><?php echo $videoName?></h1>
                                     <video controls poster="admin/<?php echo $row['photopath']?>"  src="admin/<?php echo $row['videopath']?>" type="video/mp4"></video> 
-                                    
+                                     <h1 style="letter-spacing: 1px; margin-top: 5px"><?php echo $videoName?></h1>
                                 </div>
 
                                 <?php
                                 }
-
-
-
-
-
                             }
 
                                 ?>
-                    
                         
             </div>
     
@@ -116,7 +103,3 @@
     
 </body>
 </html>
-
-
-
-   
