@@ -17,6 +17,7 @@
      the range is  18.5 to 24.9 normal*/
    
      $result = $row['weight']/($row['height']^2);
+   
 
      $_SESSION['gender'] = $row['gender'];
     
@@ -49,6 +50,12 @@
         }else{
             $_SESSION['state'] = "normal";
         }
+        ?>
+            <div class="info">
+                <p>Basen on the canculations of your height (<?php echo $row['height']?>) and your weight (<?php echo $row['weight']?>) you are in the <?php echo $_SESSION['state']?> range </p>
+                <p>Here are some videos we recommend for you</p>
+            </div>
+        <?php
 
         $result2;
         if($_SESSION['gender'] == 'B'){
@@ -58,10 +65,6 @@
             $selectVideos = "SELECT * FROM customvideos WHERE state = '$_SESSION[state]' AND gender = '$_SESSION[gender]';";
             $result2 = $DB->query($selectVideos);
         }
-
-        
-
-
     ?>
      <main>
             <div class="vid">

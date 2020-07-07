@@ -42,3 +42,9 @@ main img {
 .oVid a:hover{
     text-decoration: underline;
 }
+.info{
+    margin-bottom: 20px;
+}
+.info p {
+    padding: 5px;
+}
