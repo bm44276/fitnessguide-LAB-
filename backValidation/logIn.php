@@ -16,6 +16,7 @@ i<?php
             $query = "SELECT * FROM accounts WHERE username = '$username';";
 
             $result = $DB->query($query);
+            
             $num = mysqli_num_rows($result);
 
             if($num == 1){
