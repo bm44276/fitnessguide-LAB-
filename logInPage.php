@@ -9,6 +9,7 @@
     <script defer src="frontValidation\LogInValidate.js"></script>
 </head>
 <body>
+<div class="all">
     <header>
         <div class="logo" >
             <img src="images/Component 12 – 1@2x.png" alt="">
@@ -55,6 +56,6 @@
             <img src="images/Component 12 – 1@2x.png" alt="">
             <h3>&copy; YourFitnessGuide.com</h3>
     </footer>
-
+</div>
 </body>
 </html>

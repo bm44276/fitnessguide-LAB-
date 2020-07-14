@@ -47,7 +47,7 @@
                 <div class="sect2">
                         <div class="flexImg">
                                 <a href="workouts.php"><div class="workouts"><h1>Workouts</h1></div></a> 
-                                <a href="custom.php"><div class="Costum"><h1>Custom</h1></div></a>    
+                                <a href="setcustom.php"><div class="Costum"><h1>Custom</h1></div></a>    
                         </div>
                         <div class="flexImg">
                                 <a href="food.php"><div class="food"><h1>Food</h1></div></a>
