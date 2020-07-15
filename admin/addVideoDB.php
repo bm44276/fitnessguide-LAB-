@@ -1,5 +1,6 @@
 <?php
     require "../backValidation\dbConnection.php";
+    $obj = new DB();
 
     if(isset($_POST['submit'])){
 
@@ -26,7 +27,7 @@
 
        if((move_uploaded_file($photoTmpName, $fileDestinationphoto )) && (move_uploaded_file($videoTmpName, $fileDestinationvideo))){
             $query = "INSERT INTO $type (name,photopath,videopath) VALUES ('$fileName','$fileDestinationphoto','$fileDestinationvideo');";
-            $DB->query($query);
+            $obj->connect()->query($query);
             header("location:addVideos.php?Successful");      
        }
 
@@ -67,7 +68,7 @@
 
        if((move_uploaded_file($photoTmpName, $fileDestinationphoto )) && (move_uploaded_file($videoTmpName, $fileDestinationvideo))){
             $query = "INSERT INTO customvideos (name,photopath,videopath,state,gender) VALUES ('$fileName','$fileDestinationphoto','$fileDestinationvideo','$type','$type2');";
-            $DB->query($query);
+            $obj->connect()->query($query);
             header("location:addVideos.php?Successful");      
        }
 

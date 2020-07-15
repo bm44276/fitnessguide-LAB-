@@ -1,12 +1,12 @@
 <?php
   require "backValidation\dbConnection.php";
     session_start();
-
+    $obj = new DB();
   if (isset($_POST['submit-button'])){
 
-        $name = $DB->real_escape_string($_POST['first-name']);
-        $surname = $DB->real_escape_string($_POST['last-name']);
-        $email = $DB->real_escape_string($_POST['email']);
+        $name = $obj->connect()->real_escape_string($_POST['first-name']);
+        $surname = $obj->connect()->real_escape_string($_POST['last-name']);
+        $email = $obj->connect()->real_escape_string($_POST['email']);
 
       
 
@@ -25,8 +25,7 @@
 
         }else
            
-            $query = "UPDATE accounts SET name = '$name', surname = '$surname', email = '$email' WHERE   username = '$_SESSION[username]'";
-            $DB->query($query);
+            $obj->changeAccountInfo($name,$surname,$email,$_SESSION['username']);
 
             $_SESSION['name'] = $name;
             $_SESSION['surname'] = $surname;
@@ -36,42 +35,11 @@
             
         if(isset($_POST['change-password'])){
 
-            $oldpassword = $DB->real_escape_string($_POST['password']);
-            $newpassword = $DB->real_escape_string($_POST['newPassword']);
+            $oldpassword = $obj->connect()->real_escape_string($_POST['password']);
+            $newpassword = $obj->connect()->real_escape_string($_POST['newPassword']);
             
-            $username = $_SESSION['username'];
-
-            $query = "SELECT * FROM accounts WHERE username = '$username';";
-
-            $result = $DB->query($query);
-            $num = mysqli_num_rows($result);
-
-            if($num == 1){
-                $row = mysqli_fetch_array($result);
-
-                if(password_verify($oldpassword,$row['password'])){
-                   
-                    
-                   if(strlen("$newpassword") < 6){
-                        header("location: profile.php?PassLengthNotEnough");
-                    }else{
-
-                        $hashedPassword = password_hash($newpassword, PASSWORD_DEFAULT);
-
-                        $ID = $_SESSION['ID'];
-                        $changePasswordQuery  = "UPDATE accounts SET password = '$hashedPassword' WHERE username = '$_SESSION[username]'";
-                        $DB->query($changePasswordQuery );
-
-                        header("location: profile.php?PasswordChangedSuccessfully");
-                    }
-
-                }else{
-                header("location: profile.php?passwordIncorrect");
-                }
-
-        }else{
-        header("location: profile.php?AccountNotFound");
-         }
+            $obj->changePassword($_SESSION['username'],$oldpassword,$newpassword);
+           
     }else{
         header("location: profile.php?NotSubmited");
     }

@@ -1,5 +1,7 @@
 <?php
     session_start();
+    require "backValidation\dbConnection.php";
+    $obj = new DB();
 ?>
 
 <!DOCTYPE html>
@@ -27,14 +29,13 @@
         <section>
            
                        <?php
-                            require "backValidation\dbConnection.php";
+                          
                             
 
                             if(isset($_POST['Submit'])){
                             $as = $_POST['search'];
 
-                            $query1 = "SELECT * from  fullbody WHERE name LIKE '%$as%';";
-                            $result = $DB->query($query1);
+                            $result = $obj->getSearchedVideos("fullbody",$as);
 
                             while($row = mysqli_fetch_assoc($result)){
                                 $videoName = basename($row['videopath'],".mp4");
@@ -45,8 +46,7 @@
                                 </div>
                                 <?php
                                 }
-                                $query2 = "SELECT * from  lowerbody WHERE name LIKE '%$as%';";
-                                $result = $DB->query($query2);
+                                $result = $obj->getSearchedVideos("lowerbody",$as);
 
                             while($row = mysqli_fetch_assoc($result)){
                                 $videoName = basename($row['videopath'],".mp4");
@@ -59,8 +59,7 @@
                                 }
 
 
-                                $query3 = "SELECT * from  upperbody WHERE name LIKE '%$as%';";
-                                $result = $DB->query($query3);
+                                $result = $obj->getSearchedVideos("upperbody",$as);
 
                             while($row = mysqli_fetch_assoc($result)){
                                 $videoName = basename($row['videopath'],".mp4");
@@ -74,8 +73,7 @@
                                 }
 
 
-                                $query3 = "SELECT * from  cardio WHERE name LIKE '%$as%';";
-                                $result = $DB->query($query3);
+                                $result = $obj->getSearchedVideos("cardio",$as);
 
                             while($row = mysqli_fetch_assoc($result)){
                                 $videoName = basename($row['videopath'],".mp4");

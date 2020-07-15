@@ -1,11 +1,11 @@
 i<?php
     require "dbConnection.php";
     session_start();
-
+    $obj = new DB();
     if (isset($_POST['submit'])){
 
-        $username = $DB->real_escape_string($_POST['username']);
-        $password = $DB->real_escape_string($_POST['password']);
+        $username = $obj->connect()->real_escape_string($_POST['username']);
+        $password = $obj->connect()->real_escape_string($_POST['password']);
 
         if(empty(trim($username))){
             header("location:../logInPage.php?InvalidForm");
@@ -13,10 +13,7 @@ i<?php
             header("location:../logInPage.php?InvalidForm");
         }else{
 
-            $query = "SELECT * FROM accounts WHERE username = '$username';";
-
-            $result = $DB->query($query);
-            
+            $result = $obj->getUser($username);
             $num = mysqli_num_rows($result);
 
             if($num == 1){
@@ -46,5 +43,5 @@ i<?php
         }
 
     }else{
-
+        header("location:../logInPage.php?NotSubmited");
     }

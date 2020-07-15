@@ -4,6 +4,7 @@
     if(!isset($_SESSION['username'])){
         header("location: ../logOut.php");
     }
+    $obj = new DB();
 ?>
 
 <!DOCTYPE html>
@@ -46,8 +47,7 @@
                             
 
                             $type = $_GET['type'];
-                            $query = "SELECT * FROM $type ORDER BY ID DESC;";
-                            $result = $DB->query($query);
+                            $result = $obj->getVideoType($type);
 
                             while($row = mysqli_fetch_assoc($result)){
                                 $videoName = basename($row['videopath'],".mp4");

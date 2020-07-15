@@ -2,13 +2,14 @@
 <?php 
     session_start();
     require "backValidation\dbConnection.php";
+    $obj = new DB();
     if(!isset($_SESSION['username'])){
         header("Location: logInPage.php");
      }
      
-     $query = "SELECT * FROM customusers WHERE ID = '$_SESSION[custom]';";
+    
 
-     $info = $DB->query($query);
+     $info = $obj->getCustomInfo($_SESSION['custom']);
 
      $row = mysqli_fetch_array($info);
 
@@ -60,14 +61,8 @@
             </div>
         <?php
 
-        $result2;
-        if($_SESSION['gender'] == 'B'){
-            $selectVideos = "SELECT * FROM customvideos WHERE state = '$_SESSION[state]';";
-            $result2 = $DB->query($selectVideos);
-        }else{
-            $selectVideos = "SELECT * FROM customvideos WHERE state = '$_SESSION[state]' AND gender = '$_SESSION[gender]';";
-            $result2 = $DB->query($selectVideos);
-        }
+        $result2 = $obj->displayCustomVideos($_SESSION['gender'],$_SESSION['state']);
+       
     ?>
      <main>
             <div class="vid">
@@ -82,7 +77,7 @@
                     }
 
                     $currentVideo = "SELECT * FROM customvideos WHERE ID = '$_GET[videoID]'";
-                    $result3 = $DB->query($currentVideo);
+                    $result3 = $obj->connect()->query($currentVideo);
                     $video = mysqli_fetch_array($result3);
 
                 ?>

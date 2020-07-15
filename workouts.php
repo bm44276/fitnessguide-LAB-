@@ -3,7 +3,8 @@
     if(!isset($_SESSION['username'])){
         header("Location: logInPage.php");
      }
- 
+     require "backValidation\dbConnection.php";
+     $obj = new DB();
     ?>
 
 <!DOCTYPE html>
@@ -40,10 +41,9 @@
                     <h1 style="margin-right: 50px;">Newer Workouts</h1>
                         <div class="flexImg">
                         <?php
-                            require "backValidation\dbConnection.php";
+                          
 
-                            $query = "SELECT * FROM fullbody ORDER BY ID DESC LIMIT 1;";
-                            $result = $DB->query($query);
+                            $result = $result = $obj->getNewsetVideo("fullbody",1);
 
                             $row = mysqli_fetch_array($result);
                                 $videoName = basename($row['videopath'],".mp4");
@@ -53,8 +53,8 @@
                             <p style="letter-spacing: 1px; margin-top: 5px"><?php echo $videoName?></p>
                             </div>
                             <?php
-                                 $query = "SELECT * FROM lowerbody ORDER BY ID DESC LIMIT 1;";
-                            $result = $DB->query($query);
+                                
+                            $result = $obj->getNewsetVideo("lowerbody",1);
 
                             $row = mysqli_fetch_array($result);
                                 $videoName = basename($row['videopath'],".mp4");
@@ -68,10 +68,10 @@
 
                         <div class="flexImg">
                         <?php
-                            require "backValidation\dbConnection.php";
+                            
 
-                            $query = "SELECT * FROM upperbody ORDER BY ID DESC LIMIT 1;";
-                            $result = $DB->query($query);
+                         
+                            $result = $obj->getNewsetVideo("upperbody",1);
 
                             $row = mysqli_fetch_array($result);
                                 $videoName = basename($row['videopath'],".mp4");
@@ -81,8 +81,8 @@
                             <p style="letter-spacing: 1px; margin-top: 5px"><?php echo $videoName?></p>
                             </div>
                             <?php
-                                 $query = "SELECT * FROM cardio ORDER BY ID DESC LIMIT 1;";
-                            $result = $DB->query($query);
+                                 
+                            $result = $obj->getNewsetVideo("cardio",1);
 
                             $row = mysqli_fetch_array($result);
                                 $videoName = basename($row['videopath'],".mp4");
@@ -104,10 +104,10 @@
                    
                     <div class="sec1">
                         <?php
-                            require "backValidation\dbConnection.php";
+                           
 
-                            $query = "SELECT * FROM fullbody ORDER BY ID DESC LIMIT 4;";
-                            $result = $DB->query($query);
+                            
+                            $result = $obj->getNewsetVideo("fullbody",4);
 
                             while($row = mysqli_fetch_assoc($result)){
                                 $videoName = basename($row['videopath'],".mp4");
@@ -133,10 +133,10 @@
                    
                     <div class="sec1">
                     <?php
-                            require "backValidation\dbConnection.php";
+                           
 
-                            $query = "SELECT * FROM upperbody ORDER BY ID DESC LIMIT 4;";
-                            $result = $DB->query($query);
+                         
+                            $result = $obj->getNewsetVideo("upperbody",4);
 
                             while($row = mysqli_fetch_assoc($result)){
                                 $videoName = basename($row['videopath'],".mp4");
@@ -161,10 +161,10 @@
                    
                     <div class="sec1">
                     <?php
-                            require "backValidation\dbConnection.php";
+                            
 
-                            $query = "SELECT * FROM lowerbody ORDER BY ID DESC LIMIT 4;";
-                            $result = $DB->query($query);
+                            
+                            $result = $obj->getNewsetVideo("lowerbody",4);
 
                             while($row = mysqli_fetch_assoc($result)){
                                 $videoName = basename($row['videopath'],".mp4");
@@ -189,10 +189,10 @@
                    
                     <div class="sec1">
                     <?php
-                            require "backValidation\dbConnection.php";
+                         
 
-                            $query = "SELECT * FROM cardio ORDER BY ID DESC LIMIT 4;";
-                            $result = $DB->query($query);
+                           
+                            $result = $obj->getNewsetVideo("cardio",4);
 
                             while($row = mysqli_fetch_assoc($result)){
                                 $videoName = basename($row['videopath'],".mp4");

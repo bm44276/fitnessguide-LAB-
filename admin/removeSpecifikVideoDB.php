@@ -1,5 +1,6 @@
 <?php
     require "../backValidation\dbConnection.php";
+    $obj = new DB();
     session_start();
     if(!isset($_SESSION['username'])){
         header("location: ../logOut.php");
@@ -13,14 +14,14 @@
         $videopath = $_POST['videopath'];
         $photopath = $_POST['photopath'];
 
-        if(unlink($videopath) && unlink($photopath)){
+        if((unlink($videopath)) && (unlink($photopath))){
 
             if (is_dir("videos/$type/ $fileName")) {
                 rmdir("videos/$type/ $fileName");
 
                 $query = "DELETE FROM $type WHERE ID = $id";
 
-                $DB->query($query);
+                $obj->connect()->query($query);
                 header("location: removeVideos.php?type=FullBody");
             }  
         }

@@ -1,11 +1,12 @@
 <?php 
       require "../backValidation\dbConnection.php";
+      $obj = new DB();
 
     $id = $_GET["ID"];
     echo $id;
 
     $query = "DELETE FROM accounts WHERE ID = $id";
 
-    $DB->query($query);
+    $obj->connect()->query($query);
 
     header("Location:removeUsers.php");

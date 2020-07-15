@@ -1,27 +1,18 @@
 <?php
     session_start();
     require "backValidation\dbConnection.php";
-
+    $obj = new DB();
     if(isset($_POST['submit'])){
 
-        $weight = $DB->real_escape_string($_POST['weight']);
-        $height = $DB->real_escape_string($_POST['height']); 
-        $gender = $DB->real_escape_string($_POST['gender']);
-        
-        $query = "INSERT INTO customusers (weight,height,gender) VALUES ($weight,$height,'$gender');";
-        $DB->query($query);
-
-        $num = (mysqli_fetch_array($DB->query("SELECT * FROM customusers ORDER BY ID DESC LIMIT 1")));
+        $weight =  $obj->connect()->real_escape_string($_POST['weight']);
+        $height =  $obj->connect()->real_escape_string($_POST['height']); 
+        $gender =  $obj->connect()->real_escape_string($_POST['gender']);
         
 
-        $_SESSION['custom'] = $num['ID'];
 
-        $updateusercustom = "UPDATE accounts SET custom = '$num[ID]' WHERE username = '$_SESSION[username]';";
+       $obj->createCustom($weight,$height,$gender,$_SESSION['username']);
+       $_SESSION['custom'] = $obj->getCustomId($_SESSION['username']);
 
-        $DB->query($updateusercustom);
-
-
-        header("location: setCustom.php");
 
     }else{
         header("location: setCustom.php?NotSubmited");

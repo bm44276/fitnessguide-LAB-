@@ -4,6 +4,7 @@
     if(!isset($_SESSION['username'])){
         header("location: ../logOut.php");
     }
+    $obj = new DB();
 ?>
 
 
@@ -51,8 +52,8 @@
                             <tbody>
                             
                                 <?php 
-                                    $query = "SELECT * FROM accounts;";
-                                    $result = $DB->query($query);
+                                    
+                                    $result = $obj->getAllUsers();
 
                                     while($row = mysqli_fetch_assoc($result)){
 
