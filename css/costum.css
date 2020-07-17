@@ -1,4 +1,8 @@
 
+.all{
+   width: 2000px;
+   margin: 0 auto;
+}
 
 main{
     display: block;

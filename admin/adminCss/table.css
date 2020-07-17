@@ -1,3 +1,9 @@
+
+.all{
+    width: 2000px;
+    margin: 0 auto;
+}
+
 .container{
     width: 900px;
     margin: 0 auto;

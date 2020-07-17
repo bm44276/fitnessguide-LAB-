@@ -2,7 +2,10 @@
     margin: 0;
     padding: 0;
 }
-
+.all{
+    width: 2000px;
+    margin: 0 auto;
+}
 body{
     font-family: Arial, Helvetica, sans-serif;
 }

@@ -44,3 +44,7 @@ section p{
     text-align: left;
     font-size: 18px;
 }
+.all{
+    width: 2000px;
+    margin: 0 auto;
+}

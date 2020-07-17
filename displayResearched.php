@@ -14,7 +14,7 @@
     <link rel="icon" type="image/ico" href="images/Component 12 – 1@2x.png" >
 </head>
 <body>
-
+<div class="all">
     <header>
     <?php
             if($_SESSION['admin'] == 1){
@@ -24,6 +24,7 @@
             }
            ?>
     </header>
+    
     <main>
         <h1>Results:</h1>
         <section>
@@ -98,6 +99,6 @@
     <footer>
     <?php include "inc/footer.php" ;?>
     </footer>
-    
+    </div>
 </body>
 </html>

@@ -17,6 +17,7 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="all">
 <header>
         <?php
         if($_SESSION['admin'] == 1){
@@ -75,6 +76,6 @@
                         </table>
              </div>           
     </div>
-    
+    </div>
 </body>
 </html>

@@ -1,6 +1,10 @@
 main {
     text-align: center;
 }
+.all{
+    width: 2000px;
+    margin: 0 auto;
+}
 .imgDiv{
         bottom: 0;
         color: #f1f1f1;

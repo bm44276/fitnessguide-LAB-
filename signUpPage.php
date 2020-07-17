@@ -9,6 +9,7 @@
     <script defer src="frontValidation\SignUpValidate.js"></script>
 </head>
 <body>
+    <div class="all">
     <header>
         <div class="logo" >
             <img src="images/Component 12 – 1@2x.png" alt="">
@@ -70,6 +71,7 @@
                 ?>
 
     </main>
+    </div>
     <div class="container"></div>
 
 </body>

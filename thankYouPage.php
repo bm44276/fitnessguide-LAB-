@@ -51,7 +51,9 @@
     </style>
 </head>
 <body>
+    <div class="all">
     <h1>Your account was created succefully</h1>
     <a href="logInPage.php">Log In</a>
+    </div>
 </body>
 </html>

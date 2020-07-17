@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="adminCss\addVideos.css">
 </head>
 <body>
+    <div class="all">
     <header>
         <?php
         if($_SESSION['admin'] == 1){
@@ -78,6 +79,7 @@
             <img src="../images/Component 12 – 1@2x.png" alt="">
             <h3>&copy; YourFitnessGuide.com</h3>
         </footer>
+        </div>
     
     <script>
         let btn = document.getElementById('btn');

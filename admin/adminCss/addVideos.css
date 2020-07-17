@@ -5,7 +5,10 @@ main{
     width: 100%;
     padding: 50px 0 ;
 }
-
+.all{
+    width: 2000px;
+    margin: 0 auto;
+}
 main form{
     width: 80%;
     margin: 50px auto;

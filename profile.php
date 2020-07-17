@@ -15,7 +15,7 @@
     <link rel="icon" type="image/ico" href="images/Component 12 – 1@2x.png" >
 </head>
 <body>
-       
+       <div class="all">
  
 <header>
 <?php

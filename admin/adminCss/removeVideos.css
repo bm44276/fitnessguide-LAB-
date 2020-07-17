@@ -4,7 +4,10 @@ video{
     border: 1px black solid;
     margin: 10px;
 }
-
+.all{
+    width: 2000px;
+    margin: 0 auto;
+}
 .selection{
     text-align: left;
     font-size: 20px;

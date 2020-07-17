@@ -37,7 +37,9 @@
      <link rel="stylesheet" href="css\displayCustomVideos.css">
 </head>
 <body>
+        <div class="all">
 <header>
+    
     <?php
             if($_SESSION['admin'] == 1){
                 include "admin\adminUserHeader.php";
@@ -46,6 +48,7 @@
             }
            ?>
     </header>
+
     <?php
         if($result <= 18.5){
             $_SESSION['state'] = "underweight";
@@ -112,6 +115,6 @@
         <footer>
              <?php include "inc/footer.php" ;?>
         </footer>
-    
+        </div>
 </body>
 </html>
