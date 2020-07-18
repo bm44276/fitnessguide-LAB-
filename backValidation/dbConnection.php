@@ -156,5 +156,22 @@ class DB{
         $result = $this->connect()->query($query);
         return $result;
     }
+  
+      function uploadsFood($image, $title, $text, $target){
+            $sql = "Insert into food (image,title,text) values ('$image', '$title', '$text');";
+            $this->connect()->query($sql);
+
+            if(move_uploaded_file($_FILES['photo']['tmp_name'], $target)){
+                header("Location: addFood.php?success=fileSent");
+            }else{
+                header("Location: addFood.php?error=fileNotSent");
+            }
+    }
+
+    function showFood(){
+        $query = "SELECT * FROM food order by id desc;";
+        $result = $this->connect()->query($query);
+        return $result;
+    }
 
 }     
