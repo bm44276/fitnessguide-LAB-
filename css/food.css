@@ -10,31 +10,30 @@ main h1{
 }
 
 section{
-    width: 60%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    height: auto;
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: auto auto auto;
 }
 
 section div{
-    width: 350px;
-    margin: 10px 20px;
-    border:1px #4996da  solid;
-    background-color: #5ba6e7;
-    height: 400px;
+    width: 400px;
+    margin: 10px 10px;
+    border:1px #4da8fd  solid;
+    background-color: #4da8fd  ;
+    height: 500px;
 }
 
 section h3{
     color: white;
     letter-spacing: 1px;
-    margin: 5px;
+    margin: 10px 0;
     font-size: 22px;
+    padding-left: 5px;
 }
 
 section div img{
-    width: 350px;
-    height: 200px;
+    width: 400px;
+    height: 250px;
 }
 
 section p{
@@ -43,8 +42,5 @@ section p{
     letter-spacing: 1px;
     text-align: left;
     font-size: 18px;
-}
-.all{
-    width: 2000px;
-    margin: 0 auto;
+    margin-top: 30px;
 }
