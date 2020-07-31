@@ -57,13 +57,18 @@
                 </div>
                         
             </section>
-
             <section class="sector2 workO">
-                    <a href="workouts.php" style="text-decoration:none;"><h1  style="color:black">WorkOuts</h1> </a>  
+                  <h1>WorkOuts</h1> 
                 <div class="sec1">
+                    <div class="link">
+                    <a href="workouts.php"><div class="workouts2"><h1>Workouts</h1></div></a> 
+                    </div>
                      <div id="info1">
                 <h3>Why exercise</h3>
-                <p>Exercising is more than just keeping your body in shape and looking good.<br> Excercising reduces your risk of heart disease, high blood pressure, osteoporosis, diabetes, and obesity.</p>
+                <p>
+                    Exercising is more than just keeping your body in shape and looking good.<br> 
+                    Excercising reduces your risk of heart disease, high blood pressure, osteoporosis, diabetes, and obesity.
+                         </p>
             </div>
             <div id="info2">
                 <h3>Why use us</h3>
@@ -73,8 +78,11 @@
                 </div>
             </section>
             <section class="sector2 fod">
-                 <a href="food.php" style="text-decoration:none;"><h1  style="color:black">Food</h1></a>   
+                 <h1>Food</h1>   
                 <div class="sec1">
+                    <div class="link">
+                <a href="food.php"><div class="food2"><h1>Food</h1></div></a>
+                    </div>
                     <div id="info3">
                 <h3>Nutrition Information</h3>
                 <p>In our page you will also find information about foods that help you in a healthier diet and to build muscle</p>
@@ -88,12 +96,16 @@
             </section>
 
             <section class="sector2 cost">
-                <a href="costum.php" style="text-decoration:none;"><h1  style="color:black">Costum</h1></a>
+                <h1>Custom</h1>
                 <div class="secCostum">
+                    <div class="link">
+                <a href="setcustom.php"><div class="Costum"><h1>Custom</h1></div></a>    
+                </div>
+                    
                     <p>
-                        Not sure where to start?
+                        Not sure where to start?<br>
                         The website offers a costum workout page where you can add your favorite workout based on your height and weight.
-                        All you need to do is click the link on the navigation bar that says Costum.
+                        All you need to do is click the link on the navigation bar that says Custom.
                     </p>
                 </div>
             </section>
