@@ -47,7 +47,16 @@
     </header>
     <main>
         <div>
-            <h1>Join Us Today</h1>
+            <br><br><br>
+        <p>
+            Welcome to <strong>Your Fitness Guide</strong> website here you will be entertained with a lot of workouts, mostly home workouts. 
+            <br> You can find a lot of workouts like full body workouts to upper body etc.
+        </p>
+        <br><br>
+        <p>
+            You also can make custom workouts based on your height weight and gender <strong>Sign up Today</strong> for more.
+        </p>
+        <br> <br> <br>
             <a href="signUpPage.php">Sign Up</a>
         </div>
 
