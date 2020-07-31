@@ -85,23 +85,20 @@ main{
 }
 
 main div{
-    width: 50%;
-    margin-left: 200px;
-    padding-top: 400px;
-    text-align: center;
+    width: 60%;
+    margin-left: 100px;
+    text-align: left;
 }
-
-main h1{
-    font-size: 50px;
+main p{
+    font-size: 30px;
     color: white;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     margin-bottom: 30px;
-
+    word-spacing:5px;
 }
 
 main a{
-    width: 70px;
-    font-size: 22px;
+ font-size: 24px;
     letter-spacing: 1px;
     font-weight: 700;
     outline: none;
@@ -110,6 +107,7 @@ main a{
     padding: 5px;
     text-decoration: none;
     color: black; 
+    margin-left: 230px;
 }
 
 main a:hover{
