@@ -1,0 +1,30 @@
+.main{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px 0;
+}
+
+.main .sec1{
+     width: 800px;
+}
+
+.main img{
+    width: 800px;
+    height: 700px;
+}
+
+.main .sec2{
+    width: 800px;
+}
+
+.main h1{
+    text-align: center;
+    font-size: 40px;
+    margin: 20px 0;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+.main p{
+    font-size: 20px;
+}
