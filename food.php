@@ -35,11 +35,12 @@
            <?php
                while($row = mysqli_fetch_assoc($result)){
                ?>
+            <a href="checkFood.php?type=<?php echo $row['id']?>">
                 <div>
                     <img src="uploads/<?php echo $row['image']?>" alt="">
-                    <h3>  <?php echo $row['title']?>  </h3>
-                    <p>   <?php echo $row['text']?> </p>
+                    <h3>  <?php echo $row['title']?> </h3>
                 </div>
+                 </a>
             <?php } ?> 
         </section> 
 
