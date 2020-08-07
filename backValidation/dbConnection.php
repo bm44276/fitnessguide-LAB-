@@ -173,5 +173,16 @@ class DB{
         $result = $this->connect()->query($query);
         return $result;
     }
+  
+  function getFood($type){
+        $query = $this->connect()->query("Select * from food where id = '$type';");
+        return $query;
+    }
+
+    function top4Food(){
+        $query = "SELECT * FROM food order by id desc limit 4;";
+        $result = $this->connect()->query($query);
+        return $result;
+    }
 
 }     
